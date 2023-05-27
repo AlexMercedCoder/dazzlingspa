@@ -1,0 +1,49 @@
+:root {
+    --background: #efcfc4;
+    --secondary: #9b045f
+}
+
+body {
+    background-color: var(--background);
+}
+
+header #title {
+    display: none;
+}
+
+#hero {
+    height: 70vh;
+    aspect-ratio: 16/9;
+    background-image: url(./img/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#footerbuttons button {
+    display: block;
+    margin: 20px;
+    font-size: 1.2em;
+    border: none;
+    color: var(--background);
+    background-color: var(--secondary);
+    transition: background-color .3s, color .3s;
+}
+
+footer {
+    width: 100%;
+}
+
+#footerbuttons button:hover {
+    color: var(--secondary);
+    background-color: var(--background);
+}
+
+#footerbuttons {
+    width: 60%;
+    min-width: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
