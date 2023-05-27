@@ -11,8 +11,37 @@ header #title {
     display: none;
 }
 
+nav {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 30px;
+}
+
+nav #logo {
+    color: var(--background)
+}
+
+nav button {
+    margin: 6px;
+    font-size: 1.1em;
+    border: none;
+    color: var(--secondary);
+    background-color: var(--background);
+    transition: background-color .3s, color .3s;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+nav button:hover {
+    color: var(--background);
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
 #hero {
-    height: 70vh;
     aspect-ratio: 16/9;
     background-image: url(./img/hero.png);
     background-repeat: no-repeat;
