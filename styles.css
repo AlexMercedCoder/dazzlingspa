@@ -1,78 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Great+Vibes&family=Noto+Sans&display=swap");
+
 :root {
-    --background: #efcfc4;
-    --secondary: #9b045f
+  --background: #efcfc4;
+  --secondary: #9b045f;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Noto Sans", sans-serif;
 }
 
 body {
-    background-color: var(--background);
+  background-color: var(--background);
+}
+
+header,
+main,
+footer {
+  width: 70%;
+  margin: auto;
+  min-width: 310px;
 }
 
 header #title {
-    display: none;
+  display: none;
 }
 
 nav {
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    height: 30px;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 nav #logo {
-    color: var(--background)
+  color: var(--background);
+  font-family: "Great Vibes", cursive;
+  font-size: 1.8em;
 }
 
 nav button {
-    margin: 6px;
-    font-size: 1.1em;
-    border: none;
-    color: var(--secondary);
-    background-color: var(--background);
-    transition: background-color .3s, color .3s;
-    border-radius: 3px;
-    padding: 3px;
+  margin: 6px;
+  font-size: 1.1em;
+  border: none;
+  color: var(--secondary);
+  background-color: var(--background);
+  transition: background-color 0.3s, color 0.3s;
+  border-top-left-radius: 8px;
+  padding: 3px;
 }
 
 nav button:hover {
-    color: var(--background);
-    background-color: var(--secondary);
-    cursor: pointer;
+  color: var(--background);
+  background-color: var(--secondary);
+  cursor: pointer;
 }
 
 #hero {
-    aspect-ratio: 16/9;
-    background-image: url(./img/hero.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: auto;
-    border-radius: 20px;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#hero aside {
+  background-color: rgba(239, 207, 196, 0.8);
+  width: 50%;
+  min-width: 280px;
+  padding: 10px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.5em;
+  border-radius: 20px;
+  color: var(--secondary)
+}
+
+#hero img {
+  width: 290px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+}
+
+#contact {
+    background-color: var(--secondary);
+    color: var(--background);
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+    font-size: .9em;
+}
+
+main {
+    color: var(--secondary);
+    font-family: "Noto Sans", sans-serif;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.service {
+    display: flex;
+    margin: 10px;
+    background-color: var(--secondary);
+    color: var(--background);
+    align-items: center;
+    padding: 3px 10px;
+}
+
+.service img {
+    height: 200px;
+}
+
+.description {
+    padding: 10px;
 }
 
 #footerbuttons button {
-    display: block;
-    margin: 20px;
-    font-size: 1.2em;
-    border: none;
-    color: var(--background);
-    background-color: var(--secondary);
-    transition: background-color .3s, color .3s;
-}
-
-footer {
-    width: 100%;
+  display: block;
+  margin: 20px 0;
+  font-size: 1.2em;
+  border: none;
+  color: var(--background);
+  background-color: var(--secondary);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #footerbuttons button:hover {
-    color: var(--secondary);
-    background-color: var(--background);
+  color: var(--secondary);
+  background-color: var(--background);
 }
 
 #footerbuttons {
-    width: 60%;
-    min-width: 300px;
+  min-width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1500px) {
+  #hero aside {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1000px) {
+  #hero aside {
+    font-size: 0.7em;
+    padding: 5px;
+  }
+  #hero aside img {
+    width: 175px;
+}
+
+.service {
+    font-size: .8em;
+}
+
+#contact {
+    font-size: .7em;
+}
+
+  header,
+  main,
+  footer {
+    width: 90%;
     margin: auto;
-    display: flex;
-    justify-content: space-around;
+    min-width: 310px;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero aside {
+    font-size: 0.5em;
+  }
+
+  #contact {
+      font-size: .3em;
+  }
+
+  .service img {
+      height: 100px;
+  }
+
+  .service {
+      font-size: .5em;
+  }
+
+  #hero aside img {
+      width: 150px;
+  }
+
+  button {
+    font-size: 0.7em;
+  }
+
+  .social {
+    display: none;
+  }
 }
